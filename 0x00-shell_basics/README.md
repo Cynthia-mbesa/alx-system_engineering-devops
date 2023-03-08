@@ -5,3 +5,4 @@
  Hidden files. this script Display current directory contents, including hidden files (starting with .). Use the long format
  I love numbers. this script Display current directory contents. Long format, with user and group IDs displayed numerically,And hidden files
  Welcome. this script creates a directory named my_first_directory in the /tmp/ directory
+ Betty in my first directory. this script moves the file betty from /tmp/ to /tmp/my_first_directory
