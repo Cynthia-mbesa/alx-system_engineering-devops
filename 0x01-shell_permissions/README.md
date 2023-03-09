@@ -19,3 +19,5 @@
  task 9. John Doe sets the mode of the file hello to -rwxr-x-wx
 
  task 10. Look in the mirror sets the mode of the file hello the same as olleh’s mode
+
+ task 11. Directories adds execute permission to all subdirectories of the current directory for the owner, the group owner and all other users
