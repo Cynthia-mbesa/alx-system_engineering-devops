@@ -7,3 +7,5 @@
  task 3. New owner changes the owner of the file hello to the user betty
 
  task 4. Empty! creates an empty file called hello
+
+ task 5. Execute adds execute permission to the owner of the file hello
