@@ -23,3 +23,5 @@
  task 11. Directories adds execute permission to all subdirectories of the current directory for the owner, the group owner and all other users
 
  task 12. More directories creates a directory called my_dir with permissions 751 in the working directory
+
+ task 13. Change group changes the group owner to school for the file hello
