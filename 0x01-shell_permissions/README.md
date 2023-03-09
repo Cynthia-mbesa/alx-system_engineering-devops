@@ -29,3 +29,5 @@
  task 14. Owner and group changes the owner to vincent and the group owner to staff for all the files and directories in the working directory
 
  task 15. Symbolic links changes the owner and the group owner of _hello(a symbolic link) to vincent and staff respectively
+
+ task 16. If only changes the owner of the file hello to betty only if it is owned by the user guillaume
