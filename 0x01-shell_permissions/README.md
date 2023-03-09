@@ -15,3 +15,5 @@
  task 7. Everybody! adds execution permission to the owner, the group owner and the other users, to the file hello
 
  task 8. James Bond sets the permission to the file hello as follows; owner and group no permission, Other users: all the permissions
+
+ task 9. John Doe sets the mode of the file hello to -rwxr-x-wx
