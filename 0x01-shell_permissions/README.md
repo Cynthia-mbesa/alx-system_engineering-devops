@@ -21,3 +21,5 @@
  task 10. Look in the mirror sets the mode of the file hello the same as olleh’s mode
 
  task 11. Directories adds execute permission to all subdirectories of the current directory for the owner, the group owner and all other users
+
+ task 12. More directories creates a directory called my_dir with permissions 751 in the working directory
