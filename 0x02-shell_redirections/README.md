@@ -46,3 +46,4 @@
 
  task 23. Empty casks make the most noise: finds all empty files and directories in the current directory and all sub-directories
 
+ task 24. A gif is worth ten thousand words: lists all the files with a .gif extension in the current directory and all its sub-directories
