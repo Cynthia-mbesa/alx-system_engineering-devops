@@ -26,3 +26,5 @@
 
  task 13. Being unique is better than being perfect: takes a list of words as input and prints only words that appear exactly once
 
+ task 14. It must be in that file: Display lines containing the pattern “root” from the file /etc/passwd
+
