@@ -30,3 +30,4 @@
 
  task 15. Count that word: Display the number of lines that contain the pattern “bin” in the file /etc/passwd
 
+ task 16. What's next?: Display lines containing the pattern “root” and 3 lines after them in the file /etc/passwd
