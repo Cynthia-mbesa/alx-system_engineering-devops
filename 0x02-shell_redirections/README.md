@@ -23,3 +23,6 @@
  task 11. Don't just count your directories, make your directories count:  counts the number of directories and sub-directories in the current direct ory
 
  task 12. What’s new: displays the 10 newest files in the current directory
+
+ task 13. Being unique is better than being perfect: takes a list of words as input and prints only words that appear exactly once
+
