@@ -15,3 +15,5 @@
  task 7. It is a good file that cuts iron without making a noise: creates a file named exactly \*\\'"Best School"\'\\*$\?\*\*\*\*\*:) containing the  text Best School ending by a new line
 
  task 8. Save current state of directory: writes into the file ls_cwd_content the result of the command ls -la
+
+ task 9. Duplicate last line: duplicates the last line of the file iacta
