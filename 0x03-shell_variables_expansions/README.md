@@ -27,3 +27,5 @@
  task 13. Floats: Write a script that prints a number with two decimal places, followed by a new line
 
  task 14. Decimal to Hexadecimal: Write a script that converts a number from base 10 to base 16
+
+ task 15. Everyone is a proponent of strong encryption: Write a script that encodes and decodes text using the rot13 encryption. Assume ASCII
