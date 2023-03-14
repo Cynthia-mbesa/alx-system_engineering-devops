@@ -20,3 +20,5 @@
 
  task 10. Love is anterior to life, posterior to death, initial of creation, and the exponent of breath: Write a script that displays the result of   BREATH to the power LOVE
 
+ task 11. There are 10 types of people in the world -- Those who understand binary, and those who don't:Write a script that converts a number from ba se 2 to base 10
+
