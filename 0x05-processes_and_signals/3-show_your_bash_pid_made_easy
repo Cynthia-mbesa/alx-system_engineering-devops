@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#displays the PID, along with the process name, of processes whose name contain the word bash
+
+#get all PIDs of processes containing bash in their name
+pids=($(pgrep -f bash))
+
+#get the PID of this script
+	script_pid=$$
+
+#print the PID nad the process name for each bash process
+	for pid in "${pids[@]}"; do
+	if [[ $pid -ne $script_pid ]]; then
+	echo "$pid bash"
+	fi
+	done
