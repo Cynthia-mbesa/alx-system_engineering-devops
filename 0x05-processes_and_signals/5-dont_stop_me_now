@@ -1,11 +1,6 @@
 #!/usr/bin/env bash
 #Bash script that stops 4-to_infinity_and_beyond process
-while true; do
-echo "To infinity and beyong"
-sleep 1
-done &
-bg_pid=$!
-trap 'echo' "Terminated"; kill "$bg_pid"; exit' SIGINT
-while true; do
-sleep 1
-done
+
+#get the PID of the process containing "beyond"
+pid=$(pgrep -f beyond)
+kill "$pid"
