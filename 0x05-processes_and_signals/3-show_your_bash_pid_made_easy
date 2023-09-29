@@ -5,11 +5,11 @@
 pids=($(pgrep -f bash))
 
 #get the PID of this script
-	script_pid=$$
+script_pid=$$
 
 #print the PID nad the process name for each bash process
 	for pid in "${pids[@]}"; do
 	if [[ $pid -ne $script_pid ]]; then
 	echo "$pid bash"
-	fi
-	done
+fi
+done
