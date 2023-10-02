@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# Displays numbers 1-20 wwith differnt messages at specific iterations
+counter=1
+while [ $counter -le 20 ]
+do
+	case $counter in
+		4)
+			echo $counter
+			echo "bad luck from China"
+			;;
+		9)
+			echo $counter
+			echo "bad luck form Italy"
+			;;
+		17)
+			echo $counter
+			echo "bad luck from Italy"
+			;;
+		*)
+			echo $counter
+			;;
+	esac
+	((counter++))
+done
