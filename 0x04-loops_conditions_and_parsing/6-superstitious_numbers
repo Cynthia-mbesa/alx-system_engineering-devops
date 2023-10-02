@@ -10,7 +10,7 @@ do
 			;;
 		9)
 			echo $counter
-			echo "bad luck form Italy"
+			echo "bad luck form Japan"
 			;;
 		17)
 			echo $counter
