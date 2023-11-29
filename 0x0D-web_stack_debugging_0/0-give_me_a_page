@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# ensure return a page but an error message
+service apache2 restart
