@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# configures a new Ubuntu machine to respective requirements
+sudo apt-get update
+sudo apt-get install -y nginx
+echo "Hello World!" | sudo tee /var/www/html/index.html > /dev/null
+sudo sed -i 's/listen 80 default_server;/listen 80;/g' /etc/nginx/sites-available/default
+sudo /etc/init.d/nginx reload
