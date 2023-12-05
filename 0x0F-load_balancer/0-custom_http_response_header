@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# custom http hearder for web-01
+
+# updatinh packages before installation
+sudo apt-get update
+sudo apt-get install -y nginx
+
+# creating and index.html page
+echo "Hello world!" | sudo tee /var/www/html/index.html
+
+# perfoming a "moved permanently redirection" (301)
+new_string="server_name _;\n\trewrite ^\/redirect_me https:\/\/github.com\/Cynthia-mbesa permanent;"
+sudo sed -i "s/server_name _;/$new_string/" /etc/nginx/sites-enabled/default
+
+# creating a 404 custom error page
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
+new_string="listen 80 default_server;\n\terror_page 404 \/404.html;\n\tlocation = \/404.html {\n\t\troot \/var\/www\/html;\n\t\tinternal;\n\t}"
+
+sudo sed -i "s/listen 80 default_server;/$new_string/" /etc/nginx/sites-enabled/default
+
+# testing configurations for syntax errors
+sudo nginx -t
+
+#restarting nginx after implementing changes
+sudo service nginx restart
+
+
