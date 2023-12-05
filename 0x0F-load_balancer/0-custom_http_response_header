@@ -6,11 +6,11 @@ sudo apt-get update
 sudo apt-get install -y nginx
 
 # creating and index.html page
-echo "Hello world!" | sudo tee /var/www/html/index.html
+echo "Hello World!" | sudo tee /var/www/html/index.html
 
 # perfoming a "moved permanently redirection" (301)
-new_string="server_name _;\n\trewrite ^\/redirect_me https:\/\/github.com\/Cynthia-mbesa permanent;"
-sudo sed -i "s/server_name _;/$new_string/" /etc/nginx/sites-enabled/default
+new_string="listen 80 default_server;\\n\\tlocation \/redirect_me {\\n\\t\\treturn 301 https:\/\/github.com\/Cynthia-mbesa\/;\\n\\t}"
+sudo sed -i "s/listen 80 default_server;/$new_string/" /etc/nginx/sites-enabled/default
 
 # creating a 404 custom error page
 echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
