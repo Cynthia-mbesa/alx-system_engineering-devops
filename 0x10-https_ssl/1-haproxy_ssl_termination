@@ -20,6 +20,6 @@ frontend https
 backend backend_servers
     balance roundrobin
     option httpchk GET / HTTP/1.1\r\nHost:\ www.saheed.tech
-    server 108440-web-01 52.87.219.241:80 check
-    server 108440-web-02 54.242.162.151:80 check
+    server 108440-web-01 107.22.144.122 check
+    server 108440-web-02 52.91.118.254 check
 sudo service haproxy restart
