@@ -1,29 +1,46 @@
 #!/usr/bin/env bash
-# A Bash script that will display information about the subdomains
+# Function to display information about a subdomain
+display_info() {
+    local subdomain="$1"
+    local record_type="$2"
+    local destination="$3"
+    echo "The subdomain $subdomain is a $record_type record and points to $destination"
+}
 
-# Check if at least one argument is provided
-if [ $# -lt 1 ]; then
-  echo "Usage: $0 domain [subdomain1 subdomain2 ...]"
-  exit 1
+# Function to audit subdomains
+audit_subdomains() {
+    local domain="$1"
+    local subdomain="$2"
+    
+    # Default subdomains to audit
+    local default_subdomains=("www" "lb-01" "web-01" "web-02")
+
+    if [ -z "$subdomain" ]; then
+        # Display information for default subdomains
+        for sub in "${default_subdomains[@]}"; do
+            info=$(dig +short "$sub.$domain")
+            if [ -n "$info" ]; then
+                display_info "$sub" "A" "$info"
+            fi
+        done
+    else
+        # Display information for the specified subdomain
+        info=$(dig +short "$subdomain.$domain")
+        if [ -n "$info" ]; then
+            display_info "$subdomain" "A" "$info"
+        fi
+    fi
+}
+
+# Check if required arguments are provided
+if [ "$#" -lt 1 ]; then
+    echo "Usage: $0 <domain> [subdomain]"
+    exit 1
 fi
 
-# Set domain name
+# Extract domain and subdomain from arguments
 domain="$1"
+subdomain="$2"
 
-# Set subdomains to query
-subdomains=("www" "lb-01" "web-01" "web-02")
-
-# If additional subdomains are provided as arguments, add them to the subdomains array
-if [ $# -gt 1 ]; then
-  subdomains+=("${@:2}")
-fi
-
-# Loop through subdomains and display information
-for subdomain in "${subdomains[@]}"; do
-  output=$(dig "$subdomain.$domain" +short)
-  if [ -n "$output" ]; then
-    echo "The subdomain $subdomain has IP address $output"
-  else
-    echo "The subdomain $subdomain does not exist"
-  fi
-done
+# Perform the audit
+audit_subdomains "$domain" "$subdomain"
