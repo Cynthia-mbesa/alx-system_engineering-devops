@@ -25,5 +25,3 @@ sudo nginx -t
 
 #restarting nginx after implementing changes
 sudo service nginx restart
-
-
