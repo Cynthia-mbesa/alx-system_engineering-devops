@@ -9,7 +9,7 @@ def top_ten(subreddit):
 
     def top_ten(subreddit):
         url = f"https://www.reddit.com/r/{subreddit}/hot.json"
-        headers = {"User-Agent": "MyBot/1.0"}
+        headers = {"User-Agent": "My-User-Agent"}
         params = {"limit": 10}
         response = requests.get(
                 url, headers=headers, params=params, allow_redirects=False
